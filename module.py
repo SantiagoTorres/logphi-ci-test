@@ -29,7 +29,8 @@ def check_sums(filenames):
         checksum = b64encode(checksum)
         checksums.append((filename, checksum))
 
-    return checksums
+    return None
+
 
 
 
