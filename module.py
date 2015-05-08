@@ -38,5 +38,6 @@ if __name__ == '__main__':
 
     filenames = get_filenames() 
     checksums = check_sums(filenames)
+	print("Yo-Aldo")
     for checksum in checksums:
         print("{}: {}".format(checksum[0], checksum[1]))
