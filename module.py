@@ -19,12 +19,12 @@ def get_filenames():
     return filenames_no_dir
 
 def check_sums(filenames):
-    
+
     checksums = []
     for filename in filenames:
         with open(filename) as fp:
             data = fp.read()
-        
+
         checksum = hashlib.sha256(data).digest()
         checksum = b64encode(checksum)
         checksums.append((filename, checksum))
@@ -36,8 +36,9 @@ def check_sums(filenames):
 
 if __name__ == '__main__':
 
-    filenames = get_filenames() 
+    filenames = get_filenames()
     checksums = check_sums(filenames)
     print("Yo-Aldo")
+    print("ALDO EL MASTER")
     for checksum in checksums:
         print("{}: {}".format(checksum[0], checksum[1]))
